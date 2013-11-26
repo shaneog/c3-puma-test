@@ -42,6 +42,8 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'puma'
+
 group :development do
   gem 'capistrano',  '~> 3.0.0'
   gem 'capistrano-rails', '~> 1.1.0'
