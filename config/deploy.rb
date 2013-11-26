@@ -16,6 +16,9 @@ set :deploy_to, "/webapps/#{fetch(:application)}"
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 # set :keep_releases, 5
 
+set :puma_cmd, "#{fetch(:bundle_cmd, 'bundle')} exec puma"
+set :pumactl_cmd, "#{fetch(:bundle_cmd, 'bundle')} exec pumactl"
+
 namespace :deploy do
 
   desc 'Restart application'
